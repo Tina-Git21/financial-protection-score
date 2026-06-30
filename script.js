@@ -133,7 +133,7 @@ function showResult() {
   const plainMessage = `Hi Cristina! I completed the Financial Protection Score assessment. My score is ${score}/100. My strongest area is ${strongest}, and my biggest gap appears to be ${gap}. I'd like to book a free consultation.`;
 
   const messengerLink = document.getElementById("messengerLink");
-  messengerLink.href = `https://m.me/cristinacruzinocencio?text=${encodeURIComponent(plainMessage)}`;
+  messengerLink.href = `https://m.me/BrightPathByCristina?text=${encodeURIComponent(plainMessage)}`;
   messengerLink.textContent = "Message Cristina with My Score";
   messengerLink.onclick = async () => {
     try {
