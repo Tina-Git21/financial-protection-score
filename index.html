@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightPath Financial Protection Score™</title>
+  <meta name="description" content="Take the free 3-minute Financial Protection Score assessment by BrightPath Financial By Cristina Inocencio." />
+  <meta property="og:title" content="BrightPath Financial Protection Score™" />
+  <meta property="og:description" content="Find out how financially protected you really are in just 3 minutes. Free, educational, and no obligation." />
+  <meta property="og:image" content="https://tina-git21.github.io/financial-protection-score/preview.png" />
+  <meta property="og:url" content="https://tina-git21.github.io/financial-protection-score/" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="shell">
+    <section class="hero card" id="introScreen">
+      <div class="brand-row">
+        <div class="mark">BP</div>
+        <div>
+          <p class="eyebrow">BrightPath Financial By Cristina Inocencio</p>
+          <p class="subtle">Licensed Financial Advisor | Pru Life UK</p>
+        </div>
+      </div>
+      <h1>What’s Your Financial Protection Score?</h1>
+      <p class="lead">Discover your biggest insurance gap in just 3 minutes. This free assessment helps you understand how prepared your family is for unexpected events.</p>
+      <div class="pill-row">
+        <span>✓ Free</span><span>✓ Instant score</span><span>✓ No obligation</span>
+      </div>
+      <button class="primary" onclick="startProfile()">Start Assessment →</button>
+      <p class="tiny">For educational purposes only. Not a substitute for personalized financial advice.</p>
+    </section>
+
+    <section class="card hidden" id="profileScreen">
+      <button class="ghost" onclick="showIntro()">← Back</button>
+      <p class="eyebrow">Step 1 of 2</p>
+      <h2>Tell me a little about you</h2>
+      <p class="subtle">This helps make your Messenger message easier to personalize. Email and mobile are optional.</p>
+      <div class="form-grid">
+        <label>Name<input id="clientName" placeholder="Juan Dela Cruz" /></label>
+        <label>Age<input id="clientAge" type="number" min="18" placeholder="34" /></label>
+        <label>Email optional<input id="clientEmail" type="email" placeholder="name@email.com" /></label>
+        <label>Mobile optional<input id="clientMobile" placeholder="09xx xxx xxxx" /></label>
+        <label>Employment status<select id="clientWork"><option>Employed</option><option>Self-employed / Business owner</option><option>OFW</option><option>Homemaker</option><option>Student</option><option>Retired</option><option>Prefer not to say</option></select></label>
+      </div>
+      <button class="primary" onclick="startQuiz()">Continue →</button>
+    </section>
+
+    <section class="card hidden" id="quizScreen">
+      <div class="topbar"><span id="questionCount"></span><span id="percentText"></span></div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+      <div class="nav"><button class="ghost" onclick="prevQuestion()">← Back</button><button class="primary" id="nextBtn" onclick="nextQuestion()" disabled>Next →</button></div>
+    </section>
+
+    <section class="card hidden" id="resultScreen">
+      <div class="brand-row">
+        <div class="mark">BP</div><div><p class="eyebrow">Your Result</p><p class="subtle">BrightPath Financial Protection Score™</p></div>
+      </div>
+      <h2>Your Financial Protection Score</h2>
+      <div class="score-wrap"><div class="score" id="scoreNumber">0</div><span>/100</span></div>
+      <p class="badge" id="scoreLabel"></p>
+      <div class="result-grid">
+        <div class="result-box"><h3>✅ Strongest Area</h3><p id="strongestArea"></p></div>
+        <div class="result-box"><h3>⚠️ Biggest Gap</h3><p id="biggestGap"></p></div>
+      </div>
+      <h3>Your Protection Breakdown</h3>
+      <div id="breakdown"></div>
+      <div class="cta">
+        <h3>Want a personalized review?</h3>
+        <p>Click below to open Messenger with your score and biggest gap already included.</p>
+        <a id="messengerBtn" class="primary link-btn" target="_blank" rel="noopener">Book My Free Consultation</a>
+      </div>
+      <button class="ghost" onclick="resetQuiz()">Retake Assessment</button>
+      <p class="tiny">This tool is for educational purposes only and does not guarantee approval, coverage, or claim eligibility.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
