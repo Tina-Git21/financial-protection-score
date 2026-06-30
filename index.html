@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Financial Protection Score™ by Cristina Inocencio</title>
+  <meta name="description" content="Take this free 3-minute assessment to discover your biggest financial protection gap." />
+
+  <!-- Facebook / Messenger preview -->
+  <meta property="og:title" content="What’s Your Financial Protection Score?" />
+  <meta property="og:description" content="Take this FREE 3-minute assessment to discover your biggest insurance gap." />
+  <meta property="og:image" content="https://tina-git21.github.io/financial-protection-score/preview.png" />
+  <meta property="og:url" content="https://tina-git21.github.io/financial-protection-score/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero" id="startScreen">
+      <div class="brand-row">
+        <div class="logo-mark">C</div>
+        <div>
+          <p class="brand-name">Cristina Inocencio</p>
+          <p class="brand-subtitle">Licensed Financial Advisor | Pru Life UK</p>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Free 3-minute assessment</p>
+          <h1>What’s Your Financial Protection Score?</h1>
+          <p class="lead">Many Filipinos have insurance… but surprisingly few know whether they’re actually protected.</p>
+          <p>This quick assessment helps you identify possible gaps in your financial protection.</p>
+
+          <div class="benefits">
+            <div>✅ Your Financial Protection Score</div>
+            <div>✅ Your strongest protection area</div>
+            <div>✅ Your biggest financial risk</div>
+            <div>✅ A personalized recommendation</div>
+          </div>
+
+          <button class="primary" onclick="startQuiz()">Start Assessment →</button>
+          <p class="fine-print">No pressure. No obligation. Educational purposes only.</p>
+        </div>
+
+        <div class="score-card">
+          <div class="shield">🛡️</div>
+          <h2>Financial Protection Score™</h2>
+          <p>Know where you are strong — and where your family may still be exposed.</p>
+          <div class="mini-stats">
+            <span>3 mins</span>
+            <span>Free</span>
+            <span>Instant result</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card hidden" id="quizScreen">
+      <div class="topbar">
+        <button class="ghost" onclick="previousQuestion()">← Back</button>
+        <span id="questionCount">Question 1 of 10</span>
+      </div>
+      <div class="progress"><div id="progressFill"></div></div>
+
+      <p class="category" id="categoryText"></p>
+      <h2 id="questionText"></h2>
+      <div class="answers" id="answers"></div>
+    </section>
+
+    <section class="result hidden" id="resultScreen">
+      <div class="brand-row compact">
+        <div class="logo-mark">C</div>
+        <div>
+          <p class="brand-name">Cristina Inocencio</p>
+          <p class="brand-subtitle">Licensed Financial Advisor | Pru Life UK</p>
+        </div>
+      </div>
+
+      <p class="eyebrow">Your result</p>
+      <h1>Your Financial Protection Score</h1>
+
+      <div class="score-result">
+        <div class="score-number"><span id="finalScore">0</span><small>/100</small></div>
+        <div>
+          <h2 id="scoreLabel">Calculating...</h2>
+          <p id="scoreMessage"></p>
+        </div>
+      </div>
+
+      <div class="insights">
+        <div class="insight-card">
+          <p>✅ Strongest Area</p>
+          <h3 id="strongestArea"></h3>
+        </div>
+        <div class="insight-card warning">
+          <p>⚠️ Biggest Gap</p>
+          <h3 id="biggestGap"></h3>
+        </div>
+      </div>
+
+      <h3>Your Protection Breakdown</h3>
+      <div id="breakdown" class="breakdown"></div>
+
+      <div class="cta-box">
+        <h2>Want a personalized review?</h2>
+        <p>Book your FREE Financial Protection Review and let’s go through your result together.</p>
+        <a class="primary link-button" id="messengerLink" href="https://m.me/cristinacruzinocencio" target="_blank" rel="noopener">Book My Free Consultation</a>
+        <button class="secondary" onclick="retakeQuiz()">Retake Assessment</button>
+      </div>
+
+      <p class="fine-print">This assessment is for educational purposes only and is not a substitute for personalized financial advice.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
