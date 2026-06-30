@@ -4,7 +4,7 @@
 const messengerTarget = "BrightPathByCristina";
 
 // Google Sheets lead capture web app URL
-const leadCaptureUrl = "https://script.google.com/macros/s/AKfycbyUFWZRMzG1jjqGhDiPur2jlKrjJzk4KYZ3er5cpjyVftf8zq8_36IFh-z70O6sZiRQrQ/exec";
+const leadCaptureUrl = "https://script.google.com/macros/s/AKfycbwnNylIftzeu0mCjwzfl9SiUY232vLbtNbtEOZVz55Lk-jmY057KPzxMwGKuLdL4DE-0A/exec";
 
 const areas = {
   hospitalization: "Hospitalization Protection",
